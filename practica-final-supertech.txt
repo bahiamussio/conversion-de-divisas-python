@@ -1,0 +1,47 @@
+---------------------------
+Problema:
+Pérdida de dinero por error en cálculos (hechos a mano) en la conversión de dinero:
+- Euro a Peso Mexicano
+- Dolar a Peso Mexicano
+
+Algoritmo:
+    // Paso 1: Definir el valor actual del Euro y el Dólar con respecto al Peso Mexicano.
+        Definir tipo_cambio_eur_a_mxn
+        Definir tipo_conversion
+
+    // Paso 2: Solicitar al usuario el tipo de conversión:
+        - Eur a MEX
+        - USD a MEX
+        Verificar si la moneda ingresada es válida antes de pedir el monto.
+        Definir tipo_conversion
+
+    // Paso 3: Solicitar al usuario el monto a convertir.
+        Definir monto_a_convertir
+
+    // Paso 4: Realizar la conversión utilizando el tipo de cambio correspondiente.
+    // Paso 5: Mostrar al usuario de la conversión.
+
+
+Pseudocódigo:
+
+Inicio
+    # Paso 1: Definir el valor actual del Euro y Dolar con respecto al Peso Mexicano.
+    Definir tipo_cambio_eur_a_mxn = 23.70
+    Definir tipo_cambio_usd_a_mxn = 20.75
+
+    # Paso 2: Solicitar al usiario el tipo de conversión (Eu a MX o USD a MX)
+    Mostrar mensaje: "Ingrese la moneda de orígen para la conversión (EUR/USD) :"
+
+    # Paso 3: Solicitar al usuario el monto a convertir.
+    Mostrar mensaje: "Por favor, ingrese el monto a convertir: "
+
+    # Paso 4: Realizar la conversión utilizando el tipo de cambio correspondiente. 
+    Si tipo_conversion == "EUR"
+        Calcular el resultado = monto_a_convertir * tipo_cambio_eur_a_mxn
+        Mostrar "El resultado de la conversión de EUR a MX es: ", resultado
+    Sino
+        Calcular el resultado = monto_a_convertir * tipo_cambio_usd_a_mxn
+        Mostrar "El resultado de la conversión de USD a MX es: ", resultado
+    Sino
+        Mostrar: "Este tipo de conversión no está disponbible."
+Fin
